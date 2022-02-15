@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Mission7.Models.Infrastructure
 {
-    [HtmlTargetElement("div", Attributes = "page-num")]
+    [HtmlTargetElement("div", Attributes = "page-okay")]
     public class PaginationTagHelper : TagHelper
     {
         private IUrlHelperFactory uhf;
@@ -32,7 +32,7 @@ namespace Mission7.Models.Infrastructure
 
             TagBuilder final = new TagBuilder("div");
 
-            for (int i = 1; i < PageOkay.TotalPages; i++)
+            for (int i = 1; i <= PageOkay.TotalPages; i++)
             {
                 TagBuilder tb = new TagBuilder("a");
 
