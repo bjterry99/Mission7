@@ -6,24 +6,9 @@
 
 @model BooksViewModel
 
-<h1 class="card-title mt-3 text-center">Amazon™ Books</h1>
-
 @foreach (Book b in Model.Books)
 {
-    <div class="card mt-3 m-lg-5 mr-5">
-        <h3 class="card-title mt-3 m-lg-3">@b.Title</h3>
-        <ul class="list-group-flush">
-            <li class="list-group-item">Author: @b.Author</li>
-            <li class="list-group-item">Publisher: @b.Publisher</li>
-            <li class="list-group-item">ISBN: @b.Isbn</li>
-            <li class="list-group-item">Classification: @b.Classification</li>
-            <li class="list-group-item">Category: @b.Category</li>
-            <li class="list-group-item">Page Count: @b.PageCount</li>
-            <li class="list-group-item">Price: @b.Price</li>
-        </ul>
-    </div>
-
-    <br />
+    <partial name="BookSummary" model="b"/>
 }
 
-<div page-okay="@Model.PageInfo" page-action="Index"></div>
+<div page-okay="@Model.PageInfo" page-action="Index" page-class="btn" page-class-normal="btn-outline-dark" page-class-enabled="true" page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
