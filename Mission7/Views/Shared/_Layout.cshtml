@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-
-    <h1 class="card-title mt-3 text-center">Amazon™ Books</h1>
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">Amazon™ Books</div>
+                <div class="col text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row m-1 p-1">
 
